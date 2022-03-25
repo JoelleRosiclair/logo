@@ -1,0 +1,33 @@
+
+svg {
+    transform: scale(40%);
+}
+
+svg:hover .flash{
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+    from,
+    50%,
+    to {
+      opacity: 1;
+    }
+  
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+  
+  .flash {
+    animation-name: flash;
+  }
+
+.flash {
+    backface-visibility: visible;
+    animation: flash 1s;
+    transform-origin: center;
+    animation-play-state: paused;
+}
